@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build outputs
+.next
+dist
+.turbo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Nested git (monorepo: single repo at root)
+apps/web/.git
+
+# Misc
+.DS_Store
+*.pem
+.vercel
