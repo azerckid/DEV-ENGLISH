@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans KR", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Lexend', 'Noto Sans KR', sans-serif; }
+        .monospace { font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", monospace; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-40 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight monospace">DEV-ENGLISH</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary py-1" href="#">기여하기</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">커뮤니티</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">설정</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+<span>Profile</span>
+</button>
+<div class="bg-slate-200 dark:bg-slate-700 rounded-full size-10 flex items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-800">
+<img alt="User profile placeholder" class="w-full h-full object-cover" data-alt="Abstract circular profile avatar for user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV6V6R7ZMrcDksuohtbBRfR4_o6KDpsyHLiuRiqZq_bcUstsk4hQi6UxLdQXjSjieqNya_qHayzRP-_3mj74lLEba1M6d2LnGRQNHRn9iegX55aFRoRHRZ7zHK7hzsfXGJB38-Fc2kP5IsTSTFii2tEokygYHOolB7B5OEpqVkx0zX-OgAWMA3vqSMLRyqsa-uQmz40DHV3uxexKFx20I3cjfAiKGVOoe3CKxHjDDyKpquKdNVsbJtGt_bIf_RR_Po63CMUfIZgA4"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 lg:px-40">
+<div class="max-w-[1200px] flex-1 flex flex-col gap-6">
+<!-- Breadcrumbs & Progress Header -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-slate-500 text-sm font-medium">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-200">Word Contribution</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-white text-3xl font-extrabold tracking-tight">Step 2 / 4 — 추출된 단어 확인</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base">기술 문서에서 추출된 주요 단어를 검토하고 선택해 주세요.</p>
+</div>
+<div class="flex flex-col gap-2 min-w-[240px]">
+<div class="flex justify-between items-center text-sm font-semibold">
+<span class="text-primary">전체 진행률</span>
+<span class="text-slate-900 dark:text-white">50%</span>
+</div>
+<div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Panel: Source Context -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm h-full">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">description</span>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg leading-tight">Source Context</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400">Reference URL</label>
+<div class="flex items-center gap-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg px-3 py-2 text-slate-400 select-none">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="text-sm truncate">https://react.dev/reference/react/useCallback</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 h-full">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400">Content</label>
+<div class="flex-1 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-4 text-slate-400 leading-relaxed text-sm italic overflow-y-auto max-h-[400px]">
+                                            "The <span class="text-slate-600 dark:text-slate-300 font-semibold underline decoration-primary/40 decoration-2">useCallback</span> hook returns a <span class="text-slate-600 dark:text-slate-300 font-semibold underline decoration-primary/40 decoration-2">memoized</span> <span class="text-slate-600 dark:text-slate-300 font-semibold underline decoration-primary/40 decoration-2">callback</span> function. This is useful when passing callbacks to <span class="text-slate-500 dark:text-slate-500 font-semibold line-through">optimized</span> child components that rely on <span class="text-slate-600 dark:text-slate-300 font-semibold underline decoration-primary/40 decoration-2">reference</span> <span class="text-slate-600 dark:text-slate-300 font-semibold underline decoration-primary/40 decoration-2">equality</span> to prevent unnecessary renders..."
+                                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Extraction List -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden h-full flex flex-col">
+<div class="p-5 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-900/50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">auto_fix_high</span>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg leading-tight">추출된 기술 단어 (6개 감지)</h3>
+</div>
+<button class="text-primary text-sm font-semibold hover:underline">모두 선택</button>
+</div>
+<div class="flex-1 overflow-y-auto p-2">
+<div class="flex flex-col gap-1">
+<!-- Active Item 1 -->
+<label class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="monospace text-base font-semibold text-slate-800 dark:text-slate-200">useCallback</span>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded">새 단어</span>
+</label>
+<!-- Active Item 2 -->
+<label class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="monospace text-base font-semibold text-slate-800 dark:text-slate-200">memoized</span>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded">새 단어</span>
+</label>
+<!-- Active Item 3 -->
+<label class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="monospace text-base font-semibold text-slate-800 dark:text-slate-200">callback</span>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded">새 단어</span>
+</label>
+<!-- Active Item 4 -->
+<label class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="monospace text-base font-semibold text-slate-800 dark:text-slate-200">reference</span>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded">새 단어</span>
+</label>
+<!-- Active Item 5 -->
+<label class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="monospace text-base font-semibold text-slate-800 dark:text-slate-200">equality</span>
+</div>
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded">새 단어</span>
+</label>
+<!-- Disabled/Existing Item -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-slate-50/50 dark:bg-slate-950/30 opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-5 h-5 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-base">close</span>
+</div>
+<span class="monospace text-base font-medium text-slate-500 line-through">optimized</span>
+</div>
+<span class="bg-slate-200 dark:bg-slate-700 text-slate-500 text-xs font-bold px-2 py-1 rounded">이미 등록됨</span>
+</div>
+</div>
+</div>
+<!-- Footer Actions Sticky at bottom of card -->
+<div class="p-5 border-t border-slate-100 dark:border-slate-800 bg-slate-50/30 dark:bg-slate-900/30 flex items-center justify-between">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 font-medium">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm"><span class="font-bold text-slate-900 dark:text-white">5</span>개 선택됨</span>
+</div>
+<div class="flex gap-3">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-11 px-6 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+<span class="material-symbols-outlined mr-2 text-sm">arrow_back</span>
+<span>이전</span>
+</button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-extrabold shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all">
+<span>AI 어원 분석 생성</span>
+<span class="material-symbols-outlined ml-2 text-sm">auto_awesome</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Additional Help/Info Bar -->
+<footer class="lg:px-40 py-8 border-t border-slate-200 dark:border-slate-800 mt-12">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs font-medium">
+<p>© 2024 DEV-ENGLISH. Technical vocabulary for modern developers.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

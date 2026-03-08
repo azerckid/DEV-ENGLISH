@@ -1,0 +1,40 @@
+{
+  "theme": {
+    "colors": {
+      "primary": "#136dec",
+      "background": {
+        "light": "#ffffff",
+        "muted": "#f9fafb",
+        "elevated": "#f3f4f6"
+      },
+      "status": {
+        "verified": "#16a34a",
+        "unreviewed": "#ca8a04",
+        "error": "#dc2626",
+        "manual": "#2563eb",
+        "auto": "#ea580c"
+      },
+      "border": "#e5e7eb",
+      "text": {
+        "primary": "#111827",
+        "muted": "#6b7280"
+      }
+    },
+    "typography": {
+      "display": ["Lexend", "sans-serif"],
+      "mono": ["JetBrains Mono", "monospace"]
+    },
+    "spacing": {
+      "header-h": "64px",
+      "container-max": "1280px",
+      "card-radius": "8px"
+    },
+    "stitch": {
+      "colorMode": "LIGHT",
+      "customColor": "#136dec",
+      "font": "LEXEND",
+      "roundness": "ROUND_EIGHT",
+      "saturation": 2
+    }
+  }
+}
