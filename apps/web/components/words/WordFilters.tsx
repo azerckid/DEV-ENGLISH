@@ -44,21 +44,21 @@ export function WordFilters({ defaultSearch, defaultStatus }: WordFiltersProps) 
   );
 
   return (
-    <div className="flex flex-col md:flex-row gap-4">
-      <div className="flex-1">
+    <div className="flex flex-col md:flex-row md:items-center gap-4">
+      <div className="flex-1 flex items-stretch">
         <Input
           type="text"
           defaultValue={defaultSearch}
           onChange={(e) => handleSearch(e.target.value)}
           placeholder="영단어 검색 (예: destructure, hydration)..."
-          className="h-12"
+          className="h-12 w-full"
         />
       </div>
       <Select
         defaultValue={defaultStatus}
         onValueChange={(value) => updateParam("status", value ?? "all")}
       >
-        <SelectTrigger className="w-full md:w-[160px] h-12">
+        <SelectTrigger className="w-full md:w-[160px] h-12 shrink-0">
           <SelectValue placeholder="상태: 전체" />
         </SelectTrigger>
         <SelectContent>
